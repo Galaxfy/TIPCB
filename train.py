@@ -148,6 +148,6 @@ if __name__=='__main__':
     # opitimizer:
     opitimizer = optimizer_function(args, model)
     exp_lr_scheduler = lr_scheduler(opitimizer, args)
-    main(model, dataloaders, compute_loss, opitimizer, exp_lr_scheduler, start_epoch, args, checkpoint_dir)
+    # main(model, dataloaders, compute_loss, opitimizer, exp_lr_scheduler, start_epoch, args, checkpoint_dir)
     start_test()
 

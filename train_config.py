@@ -7,7 +7,7 @@ def parse_args():
     #dataset_Directory
     #CUHK-PEDES
     parser.add_argument('--dir', type=str,
-                        default=r'/datasets',
+                        default=r'./datasets',
                         help='directory to store dataset')
     parser.add_argument('--dataset', type=str,
                         default="CUHKPEDES")
@@ -38,7 +38,7 @@ def parse_args():
 
     #experiment setting
     parser.add_argument('--batch_size', type=int, default=64)
-    parser.add_argument('--num_epoches', type=int, default=80)
+    parser.add_argument('--num_epoches', type=int, default=80)  # xfy,default=80
     parser.add_argument('--resume', action='store_true',
                         help='whether or not to restore the pretrained whole model')
 
@@ -63,6 +63,6 @@ def parse_args():
 
     # Default setting
     parser.add_argument('--seed', type=int, default=0)
-    parser.add_argument('--gpus', type=str, default='6')
+    parser.add_argument('--gpus', type=str, default='0')  # xfy,default='6'
     args = parser.parse_args()
     return args
